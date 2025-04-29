@@ -60,7 +60,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-
+builder.Services.AddRazorPages();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>
@@ -90,7 +90,7 @@ builder.Services.AddSwaggerGen(c =>
         In = ParameterLocation.Header,
         Description = "Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 12345abcdef\"",
     });
-
+   
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
